@@ -1,0 +1,46 @@
+@import 'tailwindcss';
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  background: #000;
+  overflow: hidden;
+  overscroll-behavior: none;
+  font-family: ui-monospace, SFMono-Regular, Menlo, 'Courier New', monospace;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* CRT glow helpers */
+.crt-text {
+  text-shadow:
+    0 0 6px currentColor,
+    0 0 20px rgba(0, 255, 140, 0.3);
+}
+.crt-box {
+  box-shadow:
+    0 0 10px rgba(0, 255, 140, 0.25),
+    inset 0 0 10px rgba(0, 255, 140, 0.1);
+}
+.scanlines {
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.25) 0px,
+    rgba(0, 0, 0, 0.25) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}
+.vignette {
+  background: radial-gradient(ellipse at center, transparent 55%, rgba(0, 0, 0, 0.55) 100%);
+}
